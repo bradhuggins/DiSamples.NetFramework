@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module name="diconfig">
+  <bind service="DiSamples.NetFramework.Domain.Interfaces.IEmployee, DiSamples.NetFramework.Domain" 
+        to="DiSamples.NetFramework.Domain.Models.FullTimeEmployee, DiSamples.NetFramework.Domain" />
+
+  <bind name ="FullTimeEmployee"
+    service="DiSamples.NetFramework.Domain.Interfaces.IEmployee, DiSamples.NetFramework.Domain"
+      to="DiSamples.NetFramework.Domain.Models.FullTimeEmployee, DiSamples.NetFramework.Domain" />
+
+  <bind name ="ContractEmployee"
+    service="DiSamples.NetFramework.Domain.Interfaces.IEmployee, DiSamples.NetFramework.Domain"
+      to="DiSamples.NetFramework.Domain.Models.ContractEmployee, DiSamples.NetFramework.Domain" />
+  
+</module>

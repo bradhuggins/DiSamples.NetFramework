@@ -17,8 +17,8 @@ namespace DiSamples.NetFramework.Ninject
         public static IKernel GetContainer()
         {
             // Create container and register types
-            IKernel container = new StandardKernel();      
-     
+            IKernel container = new StandardKernel();
+            //container.Load(System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "diconfig.xml"));
             return container;
         }
 
@@ -39,10 +39,15 @@ namespace DiSamples.NetFramework.Ninject
             //register named type for contract employee
             container.Bind<IEmployee>().To<ContractEmployee>().Named("ContractEmployee");
 
+
+            container.Bind<PayrollProcessor>().ToSelf();
+
             //register for property injection
+            container.Bind<Authenticator>().ToSelf();
 
             //register for method injection
-
+            container.Bind<TimeTracker>().ToSelf();
+            
             return container;
         }
 

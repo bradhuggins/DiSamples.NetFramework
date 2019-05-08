@@ -20,10 +20,10 @@ namespace DiSamples.NetFramework.Ninject
         public static IEmployee CreateInstance()
         {
             // Create container and register types
-            IKernel kernel = DIHelper.GetFluentContainer();
+            IKernel container = DIHelper.GetFluentContainer();
 
             // Retrieve an instance 
-            IEmployee obj = kernel.Get<IEmployee>();
+            IEmployee obj = container.Get<IEmployee>(m => m.Name == null);
             return obj;
         }
 
@@ -35,10 +35,10 @@ namespace DiSamples.NetFramework.Ninject
         public static IEmployee CreateInstanceWithName(string name)
         {
             // Create container and register types
-            IKernel kernel = DIHelper.GetFluentContainer();
+            IKernel container = DIHelper.GetFluentContainer();
 
             // Retrieve an instance 
-            IEmployee obj = kernel.Get<IEmployee>(name);
+            IEmployee obj = container.Get<IEmployee>(name);
             return obj;
         }
         

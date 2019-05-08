@@ -25,7 +25,7 @@ namespace DiSamples.NetFramework.NinjectTests
         //    var container = DIHelper.GetContainer();
 
         //    //Act
-        //    IEmployee actual = container.GetInstance<IEmployee>();
+        //    IEmployee actual = container.Get<IEmployee>();
 
         //    //Assert
         //    Assert.IsNotNull(actual);
@@ -55,7 +55,7 @@ namespace DiSamples.NetFramework.NinjectTests
             var container = DIHelper.GetFluentContainer();
 
             //Act
-            IEmployee actual = container.Get<IEmployee>();
+            IEmployee actual = container.Get<IEmployee>(m => m.Name == null);
 
             //Assert
             Assert.IsNotNull(actual);

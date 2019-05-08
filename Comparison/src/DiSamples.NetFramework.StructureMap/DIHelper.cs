@@ -17,8 +17,8 @@ namespace DiSamples.NetFramework.StructureMap
         public static Container GetContainer()
         {
             // Create container and register types
-            Container container = new Container();      
-     
+            Container container = new Container();
+
             return container;
         }
 
