@@ -17,35 +17,35 @@ namespace DiSamples.NetFramework.CastleWindsorTests
     {
         #region Test Methods
 
-        //[TestMethod()]
-        //public void GetContainerTest()
-        //{
-        //    //Arrange
-        //    FullTimeEmployee expected = new FullTimeEmployee();
-        //    var container = DIHelper.GetContainer();
+        [TestMethod()]
+        public void GetContainerTest()
+        {
+            //Arrange
+            FullTimeEmployee expected = new FullTimeEmployee();
+            var container = DIHelper.GetContainer();
 
-        //    //Act
-        //    IEmployee actual = container.Resolve<IEmployee>();
+            //Act
+            IEmployee actual = container.Resolve<IEmployee>();
 
-        //    //Assert
-        //    Assert.IsNotNull(actual);
-        //    Assert.AreEqual(expected.GetType(), actual.GetType());
-        //}
+            //Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expected.GetType(), actual.GetType());
+        }
 
-        //[TestMethod()]
-        //public void GetContainerNamedTest()
-        //{
-        //    //Arrange
-        //    ContractEmployee expected = new ContractEmployee();
-        //    var container = DIHelper.GetContainer();
+        [TestMethod()]
+        public void GetContainerNamedTest()
+        {
+            //Arrange
+            ContractEmployee expected = new ContractEmployee();
+            var container = DIHelper.GetContainer();
 
-        //    //Act
-        //    IEmployee actual = container.Resolve<IEmployee>("ContractEmployee");
+            //Act
+            IEmployee actual = container.Resolve<IEmployee>("ContractEmployee");
 
-        //    //Assert
-        //    Assert.IsNotNull(actual);
-        //    Assert.AreEqual(expected.GetType(), actual.GetType());
-        //}
+            //Assert
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expected.GetType(), actual.GetType());
+        }
 
         [TestMethod()]
         public void GetFluentContainerTest()
