@@ -23,7 +23,7 @@ namespace DiSamples.NetFramework.Ninject
         /// Gets or sets the employee.
         /// </summary>
         /// <value>The employee.</value>
-        [Inject]
+        [Inject, Named("FullTimeEmployee")]
         public IEmployee Employee
         {
             get { return this._employee; }

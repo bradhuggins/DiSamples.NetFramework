@@ -53,7 +53,7 @@ namespace DiSamples.NetFramework.Ninject
         /// </summary>
         /// <param name="employee">The employee.</param>
         [Inject]
-        public PayrollProcessor(IEmployee employee)
+        public PayrollProcessor([Named("FullTimeEmployee")]IEmployee employee)
         {
             this._employee = employee;
         } 

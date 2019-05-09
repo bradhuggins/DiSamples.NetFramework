@@ -50,7 +50,7 @@ namespace DiSamples.NetFramework.Ninject
         /// </summary>
         /// <param name="employee">The employee.</param>
         [Inject]
-        public void Initialize(IEmployee employee)
+        public void Initialize([Named("FullTimeEmployee")] IEmployee employee)
         {
             _employee = employee;
         } 
