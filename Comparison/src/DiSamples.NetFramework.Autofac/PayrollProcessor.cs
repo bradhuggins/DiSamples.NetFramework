@@ -44,7 +44,7 @@ namespace DiSamples.NetFramework.Autofac
         /// </summary>
         public PayrollProcessor()
         {
-            this._employee = new FullTimeEmployee();
+            this._employee = new NullEmployee();
         }
 
         /// <summary>

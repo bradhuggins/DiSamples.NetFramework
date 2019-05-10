@@ -35,7 +35,7 @@ namespace DiSamples.NetFramework.Unity
             container.RegisterType<IEmployee, FullTimeEmployee>();
 
             //register named type for fulltime employee
-            container.RegisterType<IEmployee, ContractEmployee>("FullTimeEmployee");
+            container.RegisterType<IEmployee, FullTimeEmployee>("FullTimeEmployee");
 
             //register named type for contract employee
             container.RegisterType<IEmployee, ContractEmployee>("ContractEmployee");
